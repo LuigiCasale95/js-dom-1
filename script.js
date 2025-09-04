@@ -42,15 +42,15 @@ function on_Off () {
 
 /* Funzione per il bottone */
 function changeButton() {
-    bottone.classList.toggle("yellowButton") /* Ad ogni clic toglie e rimuove la class YellowButton */
+    bottone.classList.toggle("yellowButton") /* Ad ogni clic toglie e rimette la la class YellowButton */
     bottone.innerHTML = "Acceso"  /* Con il clic si sostituisce la scritta spento con acceso */
 
     const isAcceso = bottone.classList.contains("Acceso") /* Genera true se ha la class "Acceso" */
     if (isAcceso) { /* Ha acceso? */
-            bottone.innerHTML = "Spento" /* Si inserisce la scritta spento */
+            bottone.innerHTML = "Accendi" /* Si inserisce la scritta spento */
             bottone.classList.remove("Acceso") /* "Acceso" */
     } else {/* Non ha acceso? */
-        bottone.innerHTML = "Acceso" /* Aggiunge la scritta */
+        bottone.innerHTML = "Spegni" /* Aggiunge la scritta */
         bottone.classList.add("Acceso")  /* Aggiunge la class "Acceso" */
     }
 }
