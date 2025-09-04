@@ -1,12 +1,9 @@
 .off {
-    display: none;
+    display: inline;
 }
 .on {
-    display: none;
+display: none;
 }
-.lampadina-off {
-
-}
-.lampadina-on {
-
-}
+#bottone {
+    margin-left: 127px;
+} 

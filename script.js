@@ -9,10 +9,6 @@ const lampOn = document.querySelector(".on");
 console.log(lampOn);
 const lampOff = document.querySelector(".off");
 console.log(lampOff);
-const lampadinaOff = document.querySelector(".lampadina-off");
-console.log(lampadinaOff);
-const lampadinaOn = document.querySelector(".lampadina-on");
-console.log(lampadinaOn);
 const bottone = document.getElementById("bottone");
 console.log(bottone);
 
@@ -29,12 +25,19 @@ bottone.addEventListener('click', on_Off)
 
 /* FUNZIONI */
 function on_Off () {
-    const isOn = lampadinaOff.classList.contains("off")
-    if (!isOn) {
-        lampadinaOff.classList.add("off")
-        lampadinaOn.classList.remove("on")
-    } else {
-        lampadinaOff.classList.remove("off")
-        lampadinaOn.classList.add("on")
+    const isOn = lampOff.classList.contains("off")/* se l'elemento contiene la classe "off" allora restutuisce true altrimenti false */
+    if (isOn) { //se isOn risulta true allora:
+        lampOff.classList.add("on")/* alla lampadina spenta si aggiunge on(display none) */
+        lampOff.classList.remove("off")/* alla lampadina spenta si toglie off(display inline) */
+        lampOn.classList.remove("on")/* alla lampadina accesa si toglie on(display none) */
+        lampOn.classList.add("off") // alla lampadina accesa si aggiunge off(display inline) 
+    } else { //altrimenti
+        lampOff.classList.add("off")/* alla lampadina spenta si aggiunge on(display none) */
+        lampOff.classList.remove("on")/* alla lampadina spenta si toglie off(display inline) */
+        lampOn.classList.remove("off")/* alla lampadina accesa si toglie on(display none) */
+        lampOn.classList.add("on")  // alla lampadina accesa si aggiunge off(display inline) 
+
     }
 }
+
+/* Funzione per il bottone */
