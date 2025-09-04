@@ -5,21 +5,21 @@ Al click del bottone, la lampadina dovrà accendersi (dovremo quindi utilizzare 
 
 /* Selezione delle Variabili */
 
-const lampAccesa = document.querySelector(".accesa");
-console.log(lampAccesa);
-const lampSpenta = document.querySelector(".spenta");
-console.log(lampSpenta);
+const lampOn = document.querySelector(".on");
+console.log(lampOn);
+const lampOff = document.querySelector(".off");
+console.log(lampOff);
+const lampadinaOff = document.querySelector(".lampadina-off");
+console.log(lampadinaOff);
+const lampadinaOn = document.querySelector(".lampadina-on");
+console.log(lampadinaOn);
 const bottone = document.getElementById("bottone");
 console.log(bottone);
 
 
 
 
-
-
-
-
-
+bottone.addEventListener('click', on_Off)
 
 
 
@@ -28,3 +28,13 @@ console.log(bottone);
 
 
 /* FUNZIONI */
+function on_Off () {
+    const isOn = lampadinaOff.classList.contains("off")
+    if (!isOn) {
+        lampadinaOff.classList.add("off")
+        lampadinaOn.classList.remove("on")
+    } else {
+        lampadinaOff.classList.remove("off")
+        lampadinaOn.classList.add("on")
+    }
+}

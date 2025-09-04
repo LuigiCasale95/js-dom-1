@@ -1,6 +1,12 @@
-.spenta {
-/*     display: none;
- */}
-.accesa {
+.off {
     display: none;
+}
+.on {
+    display: none;
+}
+.lampadina-off {
+
+}
+.lampadina-on {
+
 }
