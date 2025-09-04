@@ -6,4 +6,10 @@ display: none;
 }
 #bottone {
     margin-left: 127px;
+    font-size: 16px;
+    width: 80px;
+    height: 30px;
 } 
+.yellowButton {
+    background-color: yellow;
+}
